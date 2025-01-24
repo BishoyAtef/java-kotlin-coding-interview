@@ -3,13 +3,23 @@
  */
 package roctpaperscissors
 
-class App {
-    val greeting: String
-        get() {
-            return "Hello!"
-        }
-}
+import enums.MOVES
+import players.Player
+import games.RockPaperScissors
+import strategies.PlayStrategy
+import strategies.RandomMoveStrategy
+import strategies.ConstantMoveStrategy
+import strategies.ScoreCalculationStrategy
+import strategies.NormalCalculationStrategy
+import scoreboards.Scoreboard
+import strategies.NormalDisplayScoreStrategy
 
 fun main() {
-    println(App().greeting)
+    val firstPlayer : Player = Player("playerA", RandomMoveStrategy())
+    val secondPlayer : Player = Player("PlayerB", ConstantMoveStrategy(MOVES.ROCK))
+    val game : RockPaperScissors = RockPaperScissors(NormalCalculationStrategy(), firstPlayer, secondPlayer)
+    val rounds : Int = 100
+    game.start(rounds)
+    val scoreBoard : Scoreboard = Scoreboard(NormalDisplayScoreStrategy())
+    scoreBoard.show(firstPlayer.getPlayerInfoCard(), secondPlayer.getPlayerInfoCard())
 }
