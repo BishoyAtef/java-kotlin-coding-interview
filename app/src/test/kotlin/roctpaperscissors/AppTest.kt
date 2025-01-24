@@ -5,13 +5,13 @@ package roctpaperscissors
 
 import enumtests.MOVESTest
 import enumtests.RESULTSTest
-// import org.junit.jupiter.api.Assertions.assertEquals
-// import org.junit.jupiter.api.Test
-import kotlin.test.Test
-import kotlin.test.assertNotNull
-import kotlin.test.assertEquals
+import strategiestests.RandMoveStrategyTest
+import strategiestests.ConstMoveStrategyTest
+
 
 class AppTest {
     val movesTest = MOVESTest()
     val resultsTest = RESULTSTest()
+    val randMoveStrategyTest = RandMoveStrategyTest()
+    val constMoveStrategyTest = ConstMoveStrategyTest()
 }

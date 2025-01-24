@@ -5,7 +5,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class MOVESTest {
-    @Test fun `enum Move should have ROCK, PAPER, and SCISSORS`() {
+    @Test fun `enum MOVES has three constants ROCK, PAPER, and SCISSORS`() {
         val moves : Array<MOVES> = MOVES.values()
         assertEquals(moves.size, 3)
         assertEquals(MOVES.ROCK, moves[0])
