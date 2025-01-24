@@ -3,12 +3,15 @@
  */
 package roctpaperscissors
 
+import enumtests.MOVESTest
+import enumtests.RESULTSTest
+// import org.junit.jupiter.api.Assertions.assertEquals
+// import org.junit.jupiter.api.Test
 import kotlin.test.Test
 import kotlin.test.assertNotNull
+import kotlin.test.assertEquals
 
 class AppTest {
-    @Test fun appHasAGreeting() {
-        val classUnderTest = App()
-        assertNotNull(classUnderTest.greeting, "app should have a greeting")
-    }
+    val movesTest = MOVESTest()
+    val resultsTest = RESULTSTest()
 }
