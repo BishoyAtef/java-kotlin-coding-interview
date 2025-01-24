@@ -22,10 +22,13 @@ The game is written in **Kotlin** and employs the **Strategy Design Pattern** fo
 The **Strategy Design Pattern** is used to separate player behaviors, making it easy to add new strategies in the future.  
 
 ### Key Components:  
-1. **PlayerStrategy Interface**: Defines the strategy for making a move (e.g., `Rock`, `Paper`, `Scissors`).  
-2. **RockPlayer Class**: Implements the `PlayerStrategy` interface to always play "Rock."  
-3. **RandomPlayer Class**: Implements the `PlayerStrategy` interface to play a random move.  
-4. **Game Class**: Manages the game logic and determines the winner based on the players' moves.  
+1. **PlayStrategy Interface**: Defines the strategy for making a move (e.g., `Random`, `constant choice`).  
+2. **RandomMoveStrategy Class**: Implements the `PlayerStrategy` interface to always play "Random moves"  
+3. **ConstantMoveStrategy Class**: Implements the `PlayerStrategy` interface to play a "Constant rock move".  
+4. **ScoreCalculationStrategy Interface**: Defines the strategy for calculating points for each player.
+5. **NormalCalculationStrategy Class**: Implements the `ScoreCalculationStrategy` interface, it calculates points with respect to first player moves so the first play
+6. **DisplayScoreStrategy Interface**: Defines the strategy for displaying the outcome of the game.
+7. **NormalDisplayScoreStrategy class**: Implements the `DisplayScoreStrategy` interface, simple text of the number of wins for each player and the number of draws
 
 ---
 
