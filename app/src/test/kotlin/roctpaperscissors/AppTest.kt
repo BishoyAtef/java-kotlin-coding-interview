@@ -7,6 +7,7 @@ import enumtests.MOVESTest
 import enumtests.RESULTSTest
 import strategiestests.RandMoveStrategyTest
 import strategiestests.ConstMoveStrategyTest
+import gamestests.RockPaperScissorsTest
 
 
 class AppTest {
@@ -14,4 +15,5 @@ class AppTest {
     val resultsTest = RESULTSTest()
     val randMoveStrategyTest = RandMoveStrategyTest()
     val constMoveStrategyTest = ConstMoveStrategyTest()
+    val gameTest = RockPaperScissorsTest()
 }
