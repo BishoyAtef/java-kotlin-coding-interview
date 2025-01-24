@@ -23,7 +23,7 @@ class RockPaperScissorsTest {
         game.start(rounds)
         val totalGames = playerA.wins + playerA.loses + playerA.draws
         assertEquals(100, totalGames)
-        assertEquals(playerA.draws, playerB.draws) // Draw count should match
-        assertEquals(playerA.wins, playerB.loses) // First player's losses are second player's wins
+        assertEquals(playerA.draws, playerB.draws)
+        assertEquals(playerA.wins, playerB.loses)
     }
 }
